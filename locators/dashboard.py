@@ -8,4 +8,7 @@ class LocatorDashboard:
     show_detail_tshirt_red = "//a[@data-test = 'item-3-title-link']"
     back_to_products = "//button[@data-test = 'back-to-products']"
     text_detail_items = "//div[@data-test = 'inventory-item-name']"
+    add_to_cart = "//button[@class = 'btn btn_primary btn_small btn_inventory ']"
+    validation_cart = "//a[@data-test = 'shopping-cart-link']"
+    cart = "//a[@class = 'shopping_cart_link']"
     

@@ -29,3 +29,15 @@ class Dashboard:
     def validation_detail_items(self):
         validation = self.setup.find_element(By.XPATH, LocatorDashboard.back_to_products).text
         return validation
+    
+    def click_cart(self):
+        self.setup.find_element(By.XPATH, LocatorDashboard.cart).click()
+
+    def add_all_product(self):
+        products = self.setup.find_elements(By.XPATH, LocatorDashboard.add_to_cart)
+        for product in products:
+            product.click()
+    
+    def validation_cart(self):
+        validation_cart = self.setup.find_element(By.XPATH, LocatorDashboard.validation_cart).text
+        return validation_cart
