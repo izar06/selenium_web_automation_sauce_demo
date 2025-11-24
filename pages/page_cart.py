@@ -1,5 +1,8 @@
 from locators.cart import LocatorCart
+from locators.checkout_information import LocatorCheckoutInformation
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from tests.conftest import capture_screenshot
 import allure
 
@@ -22,4 +25,12 @@ class Cart:
     def click_checkout(self):
         with allure.step("Click Checkout"):
             self.setup.find_element(By.ID, LocatorCart.btn_checkout).click()
-            capture_screenshot(self.setup, "Click Checkout Berhasil")
+            try:
+                element = WebDriverWait(self.setup,10).until(EC.visibility_of_element_located((By.XPATH, LocatorCheckoutInformation.title_page_checkout_information))).text
+                print(element)
+                print("Element Muncul")
+                capture_screenshot(self.setup, "Click Checkout Berhasil")
+            except:
+                print("Element Tidak Muncul")
+                
+                
