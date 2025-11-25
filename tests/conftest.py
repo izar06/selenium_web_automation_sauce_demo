@@ -3,8 +3,11 @@ from time import sleep
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.common.exceptions import TimeoutException
+from utils.notifier import send_report_to_telegram
 import pytest
 import allure
+import subprocess
+
 
 
 def capture_screenshot(driver, name="Screenshoot"):
@@ -30,3 +33,10 @@ def setup():
     yield driver
     capture_screenshot(driver)
     driver.quit()
+
+
+
+
+# def pytest_sessionfinish(session, exitstatus):
+#     print("📤 Kirim report ke Telegram...")
+#     send_report_to_telegram()
