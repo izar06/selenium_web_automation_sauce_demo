@@ -1,7 +1,7 @@
 import requests
 
 BOT_TOKEN = "8282453071:AAEHHv2wwL5aEUnLzCeFrGJN3XRjj4yWyWQ"
-CHAT_ID = "1373996323"
+CHAT_ID = "-1003284337293"
 FILE_PATH = "/Users/izarhairulanam/Documents/Izar/project_selenium/allure-report.zip"  # file dari automation kamu
 WEBHOOK_URL_DISCORD = "https://discord.com/api/webhooks/1442783839758844006/db_A-kAkWS16kR05oKazGMdslUgYUzTHJnn9dhMItyfb70BCbWVWkYyunGXotlC-A2_f"
 
