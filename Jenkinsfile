@@ -26,7 +26,7 @@ pipeline {
                 sh '''
                     docker exec python-runner bash -c "
                         . venv/bin/activate &&
-                        python /var/jenkins_home/workspace/PROJECT_SELENIUM/run.py
+                        python /var/jenkins_home/workspace/selenium_web_automation_swag_labs/run.py
                     "
                 '''
             }
